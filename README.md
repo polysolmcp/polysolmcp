@@ -1,17 +1,17 @@
 # Polymarket Agent Hub
 
-A complete solution for building AI agents that interact with Polymarket prediction markets. This repository contains both a beautiful documentation website and a fully functional MCP (Model Context Protocol) server.
+A complete solution for building AI agents that interact with Polymarket prediction markets. This repository contains both a web application for connecting and testing the MCP server, and a fully functional MCP (Model Context Protocol) server.
 
 ## What's Inside
 
 This repository provides two main components:
 
-1. **Polymarket Agent Hub (Frontend)** - A modern Next.js 14 documentation website that helps developers understand and get started with the MCP server
+1. **Polymarket Agent Hub (Frontend)** - A modern Next.js 14 web application that allows users to connect to and test the MCP server
 2. **PolyMarket MCP Server (Backend)** - A production-ready Python MCP server that provides AI agents with access to Polymarket prediction market data
 
 ## Quick Start
 
-### For the Documentation Website
+### For the Web Application
 
 ```bash
 # Install dependencies
@@ -25,7 +25,7 @@ npm run build
 npm start
 ```
 
-Visit `http://localhost:3000` to see the documentation site.
+Visit `http://localhost:3000` to access the web application where you can connect to and test the MCP server.
 
 ### For the MCP Server
 
@@ -47,14 +47,15 @@ uv run src/polymarket_mcp/server.py
 
 ---
 
-## Part 1: Documentation Website (Frontend)
+## Part 1: Polymarket Agent Hub (Frontend)
 
 ### Overview
 
-The Polymarket Agent Hub is a static documentation website built with Next.js 14, TypeScript, and Tailwind CSS. It provides:
+The Polymarket Agent Hub is a web application built with Next.js 14, TypeScript, and Tailwind CSS. It provides:
 
+- Interactive interface for connecting to and testing the MCP server
 - Clear explanations of what the MCP server does
-- Step-by-step installation instructions
+- Step-by-step installation and configuration instructions
 - Code examples and configuration snippets
 - Agent blueprint ideas for inspiration
 - Frequently asked questions
@@ -340,7 +341,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Support
 
 - **GitHub Issues**: Report bugs or request features
-- **Documentation**: Visit the website at `http://localhost:3000` when running locally
+- **Web Application**: Visit the application at `http://localhost:3000` when running locally to connect and test the MCP server
 - **MCP Protocol**: Learn more about MCP at [modelcontextprotocol.io](https://modelcontextprotocol.io)
 
 ---

@@ -1,12 +1,12 @@
 /**
  * Polymarket Agent Hub - Main Landing Page
  * 
- * This is the main page component for the Polymarket Agent Hub documentation site.
+ * This is the main page component for the Polymarket Agent Hub web application.
  * It includes all sections: Hero, What is this?, Quickstart, MCP Config, Tools,
  * Agent Blueprints, FAQ, and Footer.
  * 
  * This is a server component (no "use client" needed) since it's a static
- * marketing/documentation page with only anchor links.
+ * marketing page with only anchor links.
  */
 export default function Home() {
   return (
@@ -418,7 +418,7 @@ FUNDER=your_polymarket_wallet_address`}
             <div className="rounded-2xl border border-slate-700/60 bg-slate-900/70 p-6">
               <h3 className="mb-2 text-lg font-semibold">Do I need to trust this website with my API key?</h3>
               <p className="text-slate-400">
-                No. The polymarket-mcp server runs on your own machine or infrastructure. This site is just documentation and ideas; we never see your keys.
+                No. The polymarket-mcp server runs on your own machine or infrastructure. This site is just a web interface for connecting and testing; we never see your keys.
               </p>
             </div>
             <div className="rounded-2xl border border-slate-700/60 bg-slate-900/70 p-6">
