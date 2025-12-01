@@ -1,100 +1,136 @@
 # Polymarket Agent Hub
 
-A landing and documentation site for the open-source polymarket-mcp MCP server, combined with the MCP server implementation itself.
+A complete solution for building AI agents that interact with Polymarket prediction markets. This repository contains both a beautiful documentation website and a fully functional MCP (Model Context Protocol) server.
 
-## Overview
+## What's Inside
 
-This repository contains:
+This repository provides two main components:
 
-1. **Polymarket Agent Hub** - A Next.js 14 landing and documentation site that serves as the front door for developers building AI agents with polymarket-mcp
-2. **PolyMarket MCP Server** - A Model Context Protocol (MCP) server that provides access to prediction market data through the PolyMarket API
+1. **Polymarket Agent Hub (Frontend)** - A modern Next.js 14 documentation website that helps developers understand and get started with the MCP server
+2. **PolyMarket MCP Server (Backend)** - A production-ready Python MCP server that provides AI agents with access to Polymarket prediction market data
 
-[![smithery badge](https://smithery.ai/badge/polymarket_mcp)](https://smithery.ai/server/polymarket_mcp)
+## Quick Start
 
-<a href="https://glama.ai/mcp/servers/c255m147fd">
-  <img width="380" height="200" src="https://glama.ai/mcp/servers/c255m147fd/badge" alt="PolyMarket Server MCP server" />
-</a>
-
-
----
-
-## Part 1: Polymarket Agent Hub (Frontend)
-
-### Purpose
-
-The Polymarket Agent Hub is a static frontend application that serves as documentation and onboarding for developers who want to build AI agents using the polymarket-mcp MCP server. It does not contain or run the MCP server itself, nor does it interact with Polymarket APIs.
-
-### Tech Stack
-
-- **Next.js 14** - React framework with App Router
-- **TypeScript** - Type safety
-- **Tailwind CSS** - Styling with dark theme
-
-### Getting Started (Frontend)
-
-#### Prerequisites
-
-- Node.js 18+ and npm (or yarn/pnpm)
-
-#### Installation
+### For the Documentation Website
 
 ```bash
+# Install dependencies
 npm install
-```
 
-#### Development
-
-Run the development server:
-
-```bash
+# Run development server
 npm run dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser to see the site.
-
-#### Production Build
-
-Build the production bundle:
-
-```bash
+# Build for production
 npm run build
-```
-
-Start the production server:
-
-```bash
 npm start
 ```
 
+Visit `http://localhost:3000` to see the documentation site.
+
+### For the MCP Server
+
+```bash
+# Clone the repository
+git clone https://github.com/polysolmcp/polysolmcp.git
+cd polysolmcp
+
+# Install Python dependencies
+uv pip install -e .
+
+# Create .env file with your credentials
+echo "KEY=your_polymarket_api_key_here" > .env
+echo "FUNDER=your_polymarket_wallet_address" >> .env
+
+# Run the server
+uv run src/polymarket_mcp/server.py
+```
+
 ---
 
-## Part 2: PolyMarket MCP Server (Backend)
+## Part 1: Documentation Website (Frontend)
+
+### Overview
+
+The Polymarket Agent Hub is a static documentation website built with Next.js 14, TypeScript, and Tailwind CSS. It provides:
+
+- Clear explanations of what the MCP server does
+- Step-by-step installation instructions
+- Code examples and configuration snippets
+- Agent blueprint ideas for inspiration
+- Frequently asked questions
+
+### Technology Stack
+
+- **Next.js 14** - Modern React framework with App Router
+- **TypeScript** - Type-safe development
+- **Tailwind CSS** - Utility-first styling with dark theme
+
+### Development
+
+```bash
+npm install          # Install dependencies
+npm run dev         # Start development server (http://localhost:3000)
+npm run build       # Build for production
+npm start           # Run production server
+```
+
+---
+
+## Part 2: MCP Server (Backend)
+
+### What is an MCP Server?
+
+The Model Context Protocol (MCP) is a standardized way for AI agents to interact with external data sources. This MCP server acts as a bridge between AI agents (like Claude Desktop) and Polymarket's prediction markets.
 
 ### Features
 
-- Real-time prediction market data with current prices and probabilities
-- Detailed market information including categories, resolution dates, and descriptions
-- Historical price and volume data with customizable timeframes (1d, 7d, 30d, all)
-- Built-in error handling and rate limit management
-- Clean data formatting for easy consumption
+- ✅ **Real-time Market Data** - Get current prices and probabilities for any market
+- ✅ **Market Discovery** - List and filter markets by status, category, and more
+- ✅ **Historical Analysis** - Access price and volume history with customizable timeframes
+- ✅ **Error Handling** - Robust error handling for API failures and rate limits
+- ✅ **Clean Data Format** - Responses formatted for easy consumption by AI agents
 
-### Installation
+### Installation Methods
 
-#### Installing via Smithery
+#### Option 1: Install via Smithery (Recommended)
 
-To install PolyMarket Predictions for Claude Desktop automatically via [Smithery](https://smithery.ai/server/polymarket_mcp):
+The easiest way to install for Claude Desktop:
 
 ```bash
 npx -y @smithery/cli install polymarket_mcp --client claude
 ```
 
-#### Claude Desktop Configuration
+#### Option 2: Manual Installation
 
-- On macOS: `~/Library/Application\ Support/Claude/claude_desktop_config.json`
-- On Windows: `%APPDATA%/Claude/claude_desktop_config.json`
+1. **Clone and install dependencies:**
 
-<details>
-<summary>Development/Unpublished Servers Configuration</summary>
+```bash
+git clone https://github.com/polysolmcp/polysolmcp.git
+cd polysolmcp
+uv pip install -e .
+```
+
+2. **Set up environment variables:**
+
+Create a `.env` file in the project root:
+
+```env
+KEY=your_polymarket_api_key_here
+FUNDER=your_polymarket_wallet_address
+```
+
+**How to get your credentials:**
+- **KEY**: Export your private key from the Polymarket UI (Settings → API Keys)
+- **FUNDER**: Your Polymarket wallet address (found in your account settings)
+
+3. **Configure Claude Desktop:**
+
+Edit your Claude Desktop configuration file:
+
+- **macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
+- **Windows**: `%APPDATA%/Claude/claude_desktop_config.json`
+
+Add this configuration:
 
 ```json
 {
@@ -103,255 +139,210 @@ npx -y @smithery/cli install polymarket_mcp --client claude
             "command": "uv",
             "args": [
                 "--directory",
-                "/Users/{INSERT_USER}/YOUR/PATH/TO/polysolmcp",
+                "/path/to/polysolmcp",
                 "run",
                 "src/polymarket_mcp/server.py"
             ],
             "env": {
-                "KEY": "<insert poly market api key>",
-                "FUNDER": "<insert polymarket wallet address>"
+                "KEY": "your_polymarket_api_key",
+                "FUNDER": "your_polymarket_wallet_address"
             }
         }
     }
 }
 ```
 
-</details>
+**Important:** Replace `/path/to/polysolmcp` with the actual path to your cloned repository.
 
-### Running Locally
-
-1. Clone the repository and install dependencies:
+4. **Run the server:**
 
 ```bash
-git clone https://github.com/polysolmcp/polysolmcp.git
-cd polysolmcp
-```
-
-#### Install Libraries
-
-```bash
-uv pip install -e .
-```
-
-2. Create a `.env` file with your PolyMarket API key:
-
-```
-KEY=your_api_key_here
-FUNDER=your_polymarket_wallet_address
-```
-
-### Running the Server
-
-After connecting Claude client with the MCP tool via json file and installing the packages, Claude should see the server's mcp tools:
-
-You can run the server yourself via:
-
-```bash
+# Standard run
 uv run src/polymarket_mcp/server.py
+
+# With MCP Inspector (for debugging)
+npx @modelcontextprotocol/inspector uv --directory /path/to/polysolmcp run src/polymarket_mcp/server.py
 ```
 
-If you want to run the server inspector along with the server:
+---
 
-```bash
-npx @modelcontextprotocol/inspector uv --directory C:\\Users\\{INSERT_USER}\\YOUR\\PATH\\TO\\polysolmcp run src/polymarket_mcp/server.py
-```
+## Available MCP Tools
 
-## Available Tools
+The server provides four main tools that AI agents can use:
 
-The server implements four tools:
+### 1. `get-market-info`
 
-- `get-market-info`: Get detailed information about a specific prediction market
-- `list-markets`: List available prediction markets with filtering options
-- `get-market-prices`: Get current prices and trading information
-- `get-market-history`: Get historical price and volume data
+Get detailed information about a specific prediction market.
 
-### get-market-info
-
-**Input Schema:**
+**Input:**
 ```json
 {
-    "market_id": {
-        "type": "string",
-        "description": "Market ID or slug"
-    }
+    "market_id": "0x1234..." // Market ID or slug
 }
 ```
 
-**Example Response:**
-```
-Title: Example Market
-Category: Politics
-Status: Open
-Resolution Date: 2024-12-31
-Volume: $1,234,567.89
-Liquidity: $98,765.43
-Description: This is an example prediction market...
----
-```
+**Returns:** Market title, category, status, resolution date, volume, liquidity, and description.
 
-### list-markets
+### 2. `list-markets`
 
-**Input Schema:**
+List available prediction markets with filtering and pagination.
+
+**Input:**
 ```json
 {
-    "status": {
-        "type": "string",
-        "description": "Filter by market status",
-        "enum": ["open", "closed", "resolved"]
-    },
-    "limit": {
-        "type": "integer",
-        "description": "Number of markets to return",
-        "default": 10,
-        "minimum": 1,
-        "maximum": 100
-    },
-    "offset": {
-        "type": "integer",
-        "description": "Number of markets to skip (for pagination)",
-        "default": 0,
-        "minimum": 0
-    }
+    "status": "active",     // Optional: "active" or "resolved"
+    "limit": 10,            // Optional: Number of results (1-100, default: 10)
+    "offset": 0             // Optional: Pagination offset (default: 0)
 }
 ```
 
-**Example Response:**
-```
-Available Markets:
+**Returns:** List of markets with IDs, titles, status, categories, and volume.
 
-ID: market-123
-Title: US Presidential Election 2024
-Status: Open
-Volume: $1,234,567.89
----
+### 3. `get-market-prices`
 
-ID: market-124
-Title: Oscar Best Picture 2024
-Status: Open
-Volume: $234,567.89
----
-```
+Get current prices and trading information for a market.
 
-### get-market-prices
-
-**Input Schema:**
+**Input:**
 ```json
 {
-    "market_id": {
-        "type": "string",
-        "description": "Market ID or slug"
-    }
+    "market_id": "0x1234..." // Market ID or slug
 }
 ```
 
-**Example Response:**
-```
-Current Market Prices for US Presidential Election 2024
+**Returns:** Current prices and implied probabilities for each outcome.
 
-Outcome: Democratic
-Price: $0.6500
-Probability: 65.0%
----
+### 4. `get-market-history`
 
-Outcome: Republican
-Price: $0.3500
-Probability: 35.0%
----
-```
+Get historical price and volume data for a market.
 
-### get-market-history
-
-**Input Schema:**
+**Input:**
 ```json
 {
-    "market_id": {
-        "type": "string",
-        "description": "Market ID or slug"
-    },
-    "timeframe": {
-        "type": "string",
-        "description": "Time period for historical data",
-        "enum": ["1d", "7d", "30d", "all"],
-        "default": "7d"
-    }
+    "market_id": "0x1234...",  // Market ID or slug
+    "timeframe": "7d"          // Optional: "1d", "7d", "30d", or "all" (default: "7d")
 }
 ```
 
-**Example Response:**
-```
-Historical Data for US Presidential Election 2024
-Time Period: 7d
+**Returns:** Time series data suitable for charts and backtesting.
 
-Time: 2024-01-20T12:00:00Z
-Price: $0.6500
-Volume: $123,456.78
 ---
-
-Time: 2024-01-19T12:00:00Z
-Price: $0.6300
-Volume: $98,765.43
----
-```
 
 ## Error Handling
 
-The server includes comprehensive error handling for various scenarios:
+The server handles various error scenarios gracefully:
 
-- Rate limiting (429 errors)
-- Invalid API keys (403 errors)
-- Invalid market IDs (404 errors)
-- Network connectivity issues
-- API timeout conditions (30-second timeout)
-- Malformed responses
+- **Rate Limiting (429)** - Automatic retry logic
+- **Invalid API Keys (403)** - Clear error messages
+- **Invalid Market IDs (404)** - Helpful error responses
+- **Network Issues** - Timeout handling (30 seconds)
+- **Malformed Responses** - Safe error recovery
 
-Error messages are returned in a clear, human-readable format.
+All errors are returned in a clear, human-readable format that AI agents can understand and communicate to users.
+
+---
 
 ## Prerequisites
 
-### For Frontend (Next.js)
-- Node.js 18+ and npm (or yarn/pnpm)
+### For Frontend Development
+- Node.js 18 or higher
+- npm, yarn, or pnpm
 
-### For Backend (MCP Server)
+### For MCP Server
 - Python 3.10 or higher
-- httpx>=0.24.0
-- mcp-core
-- python-dotenv>=1.0.0
-- py-clob-client
+- `uv` package manager (recommended) or `pip`
+- Required Python packages:
+  - `mcp>=0.1.0`
+  - `httpx>=0.24.0`
+  - `python-dotenv>=1.0.0`
+  - `py-clob-client`
+
+All dependencies are automatically installed when you run `uv pip install -e .`
+
+---
 
 ## Project Structure
 
 ```
-polymarket-agent-hub/
+polysolmcp/
 ├── src/
 │   ├── app/                    # Next.js frontend application
 │   │   ├── layout.tsx          # Root layout with metadata
-│   │   ├── page.tsx            # Main landing page
+│   │   ├── page.tsx            # Main landing page with all sections
 │   │   └── globals.css         # Global styles and Tailwind imports
 │   └── polymarket_mcp/         # MCP server Python package
-│       ├── __init__.py
+│       ├── __init__.py         # Package initialization
 │       └── server.py           # Main MCP server implementation
-├── package.json                 # Node.js dependencies
+├── package.json                 # Node.js dependencies and scripts
 ├── pyproject.toml              # Python package configuration
 ├── next.config.mjs             # Next.js configuration
 ├── tailwind.config.ts          # Tailwind CSS configuration
 ├── tsconfig.json               # TypeScript configuration
 ├── Dockerfile                  # Docker configuration for MCP server
-├── smithery.yaml               # Smithery configuration
+├── smithery.yaml               # Smithery installation configuration
 ├── LICENSE                     # MIT License
 └── README.md                   # This file
 ```
 
-## Notes
+---
 
-- The frontend is purely for documentation and onboarding to polymarket-mcp
-- Users should refer to this README for up-to-date environment details and installation instructions
-- The MCP server must be installed and run separately from the frontend
-- This repository combines both the documentation site and the MCP server implementation
+## Use Cases
+
+This MCP server enables AI agents to:
+
+- **Monitor Markets** - Track specific prediction markets for changes
+- **Analyze Trends** - Study historical price movements and patterns
+- **Discover Opportunities** - Find high-volume or interesting markets
+- **Build Trading Bots** - Create automated agents that make decisions based on market data
+- **Research** - Gather data for analysis and reporting
+
+---
+
+## Troubleshooting
+
+### Server won't start
+- Check that your `.env` file exists and contains valid `KEY` and `FUNDER` values
+- Verify Python 3.10+ is installed: `python --version`
+- Ensure dependencies are installed: `uv pip install -e .`
+
+### Claude Desktop can't connect
+- Verify the path in `claude_desktop_config.json` is correct
+- Check that environment variables are set in the config file
+- Restart Claude Desktop after making configuration changes
+
+### API errors
+- Verify your API key is valid and has proper permissions
+- Check that your wallet address (FUNDER) is correct
+- Ensure you're not hitting rate limits
+
+---
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
+Contributions are welcome! Here's how you can help:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Make your changes
+4. Commit with clear messages (`git commit -m 'Add amazing feature'`)
+5. Push to your branch (`git push origin feature/amazing-feature`)
+6. Open a Pull Request
+
+For major changes, please open an issue first to discuss what you'd like to change.
+
+---
 
 ## License
 
-MIT License - see LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## Support
+
+- **GitHub Issues**: Report bugs or request features
+- **Documentation**: Visit the website at `http://localhost:3000` when running locally
+- **MCP Protocol**: Learn more about MCP at [modelcontextprotocol.io](https://modelcontextprotocol.io)
+
+---
+
+**Note:** This project is not affiliated with Polymarket. Use at your own risk. Always verify API responses and handle errors appropriately in production environments.

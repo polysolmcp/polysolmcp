@@ -1,7 +1,17 @@
+/**
+ * Polymarket Agent Hub - Main Landing Page
+ * 
+ * This is the main page component for the Polymarket Agent Hub documentation site.
+ * It includes all sections: Hero, What is this?, Quickstart, MCP Config, Tools,
+ * Agent Blueprints, FAQ, and Footer.
+ * 
+ * This is a server component (no "use client" needed) since it's a static
+ * marketing/documentation page with only anchor links.
+ */
 export default function Home() {
   return (
     <div className="min-h-screen">
-      {/* Top Navbar */}
+      {/* Top Navbar - Sticky header with site title and GitHub link */}
       <nav className="sticky top-0 z-50 border-b border-slate-800 bg-slate-950/90 backdrop-blur-sm">
         <div className="mx-auto max-w-6xl px-4 py-4">
           <div className="flex items-center justify-between">
