@@ -106,7 +106,7 @@ export default function Home() {
         <section className="mb-28 md:mb-32">
           <h2 className="mb-4 text-3xl font-bold md:text-4xl">What is polymarket-mcp?</h2>
           <div className="grid gap-8 lg:grid-cols-2">
-            <div className="space-y-4 text-slate-400">
+            <div className="space-y-4 text-slate-400 leading-relaxed">
               <p>
                 polymarket-mcp is a Model Context Protocol (MCP) server that wraps Polymarket&apos;s APIs.
                 It standardizes several tools for AI agents to interact with prediction markets in a consistent way.
