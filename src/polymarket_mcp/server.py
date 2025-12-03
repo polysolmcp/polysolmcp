@@ -34,6 +34,8 @@ load_dotenv()
 server = Server("polymarket_predictions")
 
 
+# The CLOB (Central Limit Order Book) client handles all communication
+# with Polymarket's API, including authentication and market data retrieval.
 def get_clob_client() -> ClobClient:
     """
     Initialize and return a ClobClient instance for interacting with Polymarket's API.
