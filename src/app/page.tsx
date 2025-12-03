@@ -267,7 +267,7 @@ FUNDER=your_polymarket_wallet_address`}
           <p className="mb-8 text-slate-400">
             The polymarket-mcp server exposes four main tools to your AI agents.
           </p>
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-7 md:grid-cols-2">
             {/* Tool 1 */}
             <div className="rounded-2xl border border-slate-700/60 bg-slate-900/70 p-6">
               <h3 className="mb-2 text-xl font-semibold text-sky-400">list-markets</h3>
