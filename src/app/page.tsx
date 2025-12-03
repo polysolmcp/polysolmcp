@@ -102,7 +102,7 @@ export default function Home() {
         </section>
 
         {/* What is this? Section */}
-        <section className="mb-24 md:mb-32">
+        <section className="mb-28 md:mb-32">
           <h2 className="mb-4 text-3xl font-bold md:text-4xl">What is polymarket-mcp?</h2>
           <div className="grid gap-8 lg:grid-cols-2">
             <div className="space-y-4 text-slate-400">
