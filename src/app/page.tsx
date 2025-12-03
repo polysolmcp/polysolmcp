@@ -34,7 +34,7 @@ export default function Home() {
           <div className="relative overflow-hidden rounded-3xl bg-gradient-to-b from-sky-500/20 via-slate-950 to-slate-950 p-8 md:p-12 lg:p-16">
             <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
               {/* Left Side */}
-              <div className="flex flex-col justify-center space-y-6">
+              <div className="flex flex-col justify-center space-y-7">
                 <div className="inline-block w-fit rounded-full border border-sky-500/30 bg-sky-500/10 px-4 py-1.5 text-xs font-medium text-sky-300">
                   Polymarket x AI Agents
                 </div>
