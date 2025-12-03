@@ -61,7 +61,7 @@ export default function Home() {
                     href="https://github.com/polysolmcp/polysolmcp"
                     target="_blank"
                     rel="noreferrer"
-                    className="rounded-lg bg-sky-500 px-6 py-3 font-semibold text-white transition-colors hover:bg-sky-600"
+                    className="rounded-lg bg-sky-500 px-6 py-3 font-semibold text-white transition-all duration-200 ease-out hover:bg-sky-600 hover:scale-105 hover:shadow-lg hover:shadow-sky-500/50"
                   >
                     View GitHub Repo
                   </a>
