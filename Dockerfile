@@ -10,6 +10,7 @@ COPY pyproject.toml /app/
 COPY src /app/src
 
 # Install dependencies
+# Upgrade pip first to ensure we have the latest package manager
 RUN pip install --no-cache-dir --upgrade pip \
     && pip install --no-cache-dir hatchling
 
@@ -21,4 +22,5 @@ ENV POLYMARKET_API_KEY="<insert api key>"
 
 # Run the server
 CMD ["python", "src/polymarket_mcp/server.py"]
+
 
