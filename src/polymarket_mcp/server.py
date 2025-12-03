@@ -175,6 +175,8 @@ def format_market_info(market_data: dict) -> str:
         
     Returns:
         str: Formatted string with market details, or error message
+    
+    TODO: consider adding support for additional market metadata fields
     """
     try:
         # Validate input
@@ -446,6 +448,8 @@ async def handle_call_tool(
             
     except Exception as e:
         # Catch any errors and return a user-friendly message
+        # TODO: add exponential backoff for rate limit errors (429)
+        # TODO: add structured logging for better error tracking
         return [types.TextContent(type="text", text=f"Error executing tool: {str(e)}")]
 
 
