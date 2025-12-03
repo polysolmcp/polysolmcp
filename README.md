@@ -83,7 +83,9 @@ npm start           # Run production server
 
 ### What is an MCP Server?
 
-The Model Context Protocol (MCP) is a standardized way for AI agents to interact with external data sources. This MCP server acts as a bridge between AI agents (like Claude Desktop) and Polymarket's prediction markets.
+The Model Context Protocol (MCP) is a standardized way for AI agents to interact with external data sources. 
+MCP servers act as bridges between AI clients (like Claude Desktop) and external APIs or services.
+This MCP server specifically connects AI agents to Polymarket's prediction markets.
 
 ### Features
 
