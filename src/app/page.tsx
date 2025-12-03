@@ -221,7 +221,7 @@ FUNDER=your_polymarket_wallet_address`}
             Add polymarket-mcp under the mcpServers section.
           </p>
           <div className="rounded-2xl border border-slate-700/60 bg-slate-900/70 p-6">
-            <pre className="overflow-x-auto rounded-lg bg-slate-950 p-4 text-sm">
+            <pre className="overflow-x-auto rounded-lg bg-slate-950 p-4 text-sm font-mono">
               <code className="text-slate-300">
                 {`{
   "mcpServers": {
