@@ -20,6 +20,7 @@ export default function Home() {
               href="https://github.com/polysolmcp/polysolmcp"
               target="_blank"
               rel="noreferrer"
+              title="View repository on GitHub"
               className="text-sm text-slate-400 hover:text-slate-200 transition-colors cursor-pointer"
             >
               GitHub
