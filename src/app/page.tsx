@@ -42,7 +42,7 @@ export default function Home() {
                 <h1 className="text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
                   Turn Polymarket into an AI-ready prediction feed.
                 </h1>
-                <p className="text-lg text-slate-400 md:text-xl">
+                <p className="text-lg text-slate-400 md:text-xl leading-relaxed">
                   This site is the front door for the open-source polymarket-mcp MCP server.
                   It lets AI agents access Polymarket markets, prices, and history through a clean MCP interface.
                 </p>
