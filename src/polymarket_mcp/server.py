@@ -73,6 +73,9 @@ def get_clob_client() -> ClobClient:
     return client
 
 
+# Register all available MCP tools with the server
+# This decorator tells the MCP framework to call this function when
+# a client requests the list of available tools
 @server.list_tools()
 async def handle_list_tools() -> list[types.Tool]:
     """
@@ -164,6 +167,9 @@ async def handle_list_tools() -> list[types.Tool]:
     ]
 
 
+# Formatting functions convert raw API responses into human-readable strings
+# These functions handle edge cases and ensure consistent output format
+# for AI agents to parse and communicate to users
 def format_market_info(market_data: dict) -> str:
     """
     Format raw market data into a human-readable string.
@@ -336,6 +342,8 @@ def format_market_history(history_data: dict) -> str:
         return f"Error formatting historical data: {str(e)}"
 
 
+# Handle tool execution requests from MCP clients
+# This decorator registers this function as the handler for all tool calls
 @server.call_tool()
 async def handle_call_tool(
     name: str, arguments: dict | None
