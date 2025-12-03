@@ -360,7 +360,7 @@ FUNDER=your_polymarket_wallet_address`}
           <p className="mb-8 text-slate-400">
             A few ready-made concepts to get your creativity going.
           </p>
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-7 md:grid-cols-3">
             {/* Blueprint 1 */}
             <div className="rounded-2xl border border-slate-700/60 bg-slate-900/70 p-6">
               <h3 className="mb-3 text-xl font-semibold">Market Explorer Bot</h3>
