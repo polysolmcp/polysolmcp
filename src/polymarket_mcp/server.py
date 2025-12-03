@@ -27,10 +27,12 @@ from py_clob_client.constants import POLYGON
 
 # Load environment variables from .env file
 # This allows the server to access API keys and wallet addresses securely
+# without hardcoding sensitive credentials in the source code.
 load_dotenv()
 
 # Initialize the MCP server with a unique name
 # This name is used to identify the server in MCP client configurations
+# and must match the server_name in the initialization options
 server = Server("polymarket_predictions")
 
 
