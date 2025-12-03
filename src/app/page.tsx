@@ -415,25 +415,25 @@ FUNDER=your_polymarket_wallet_address`}
         <section className="mb-24 md:mb-32">
           <h2 className="mb-8 text-3xl font-bold md:text-4xl">FAQ</h2>
           <div className="space-y-4">
-            <div className="rounded-2xl border border-slate-700/60 bg-slate-900/70 p-6">
+            <div className="rounded-2xl border border-slate-700/60 bg-slate-900/70 p-6 transition-all duration-200">
               <h3 className="mb-2 text-lg font-semibold">Do I need to trust this website with my API key?</h3>
               <p className="text-slate-400">
                 No. The polymarket-mcp server runs on your own machine or infrastructure. This site is just a web interface for connecting and testing; we never see your keys.
               </p>
             </div>
-            <div className="rounded-2xl border border-slate-700/60 bg-slate-900/70 p-6">
+            <div className="rounded-2xl border border-slate-700/60 bg-slate-900/70 p-6 transition-all duration-200">
               <h3 className="mb-2 text-lg font-semibold">Which AI clients support MCP?</h3>
               <p className="text-slate-400">
                 Claude Desktop explicitly supports MCP, along with any other MCP-compatible clients. The protocol is open and standardized.
               </p>
             </div>
-            <div className="rounded-2xl border border-slate-700/60 bg-slate-900/70 p-6">
+            <div className="rounded-2xl border border-slate-700/60 bg-slate-900/70 p-6 transition-all duration-200">
               <h3 className="mb-2 text-lg font-semibold">Can I deploy the MCP server to my own infrastructure?</h3>
               <p className="text-slate-400">
                 Yes, it&apos;s standard Python. You can run it anywhere you can run uv and provide environment variables—your local machine, a VPS, a container, or any other infrastructure you control.
               </p>
             </div>
-            <div className="rounded-2xl border border-slate-700/60 bg-slate-900/70 p-6">
+            <div className="rounded-2xl border border-slate-700/60 bg-slate-900/70 p-6 transition-all duration-200">
               <h3 className="mb-2 text-lg font-semibold">Does this perform trading on my behalf?</h3>
               <p className="text-slate-400">
                 No. The MCP server provides data about markets, prices, and history. Any actual trading, wallet actions, or automation is done by your own agents or scripts and is your responsibility.
