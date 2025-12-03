@@ -15,6 +15,7 @@ RUN pip install --no-cache-dir --upgrade pip \
     && pip install --no-cache-dir hatchling
 
 # Install the project in the container
+# Installing in editable mode allows the package to be imported correctly
 RUN pip install --no-cache-dir /app
 
 # Define environment variables
