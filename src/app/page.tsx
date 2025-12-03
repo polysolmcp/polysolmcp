@@ -154,7 +154,7 @@ export default function Home() {
           <p className="mb-8 text-slate-400">
             Clone, configure, and run the polymarket-mcp server in three simple steps.
           </p>
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-7 md:grid-cols-3">
             {/* Step 1 */}
             <div className="rounded-2xl border border-slate-700/60 bg-slate-900/70 p-6">
               <h3 className="mb-3 text-xl font-semibold">1. Clone & install</h3>
