@@ -67,7 +67,7 @@ export default function Home() {
                   </a>
                   <a
                     href="#quickstart"
-                    className="rounded-lg border border-slate-700 bg-slate-900/50 px-6 py-3 font-semibold transition-colors hover:bg-slate-800/50"
+                    className="rounded-lg border border-slate-700 bg-slate-900/50 px-6 py-3 font-semibold transition-all duration-200 ease-out hover:bg-slate-800/50 hover:scale-105 hover:shadow-md hover:border-slate-600"
                   >
                     Agent Quickstart
                   </a>
