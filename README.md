@@ -1,6 +1,8 @@
 # Polymarket Agent Hub
 
-A complete solution for building AI agents that interact with Polymarket prediction markets. This repository contains both a web application for connecting and testing the MCP server, and a fully functional MCP (Model Context Protocol) server.
+A complete solution for building AI agents that interact with Polymarket prediction markets. 
+This repository contains both a web application for connecting and testing the MCP server, 
+and a fully functional MCP (Model Context Protocol) server.
 
 ## What's Inside
 
