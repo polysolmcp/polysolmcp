@@ -269,7 +269,7 @@ FUNDER=your_polymarket_wallet_address`}
           </p>
           <div className="grid gap-7 md:grid-cols-2">
             {/* Tool 1 */}
-            <div className="rounded-2xl border border-slate-700/60 bg-slate-900/70 p-6">
+            <div className="rounded-2xl border border-slate-700/50 bg-slate-900/70 p-6">
               <h3 className="mb-2 text-xl font-semibold text-sky-400">list-markets</h3>
               <p className="mb-4 text-slate-400">
                 Browse markets with filters for status and pagination.
@@ -291,7 +291,7 @@ FUNDER=your_polymarket_wallet_address`}
             </div>
 
             {/* Tool 2 */}
-            <div className="rounded-2xl border border-slate-700/60 bg-slate-900/70 p-6">
+            <div className="rounded-2xl border border-slate-700/50 bg-slate-900/70 p-6">
               <h3 className="mb-2 text-xl font-semibold text-sky-400">get-market-info</h3>
               <p className="mb-4 text-slate-400">
                 Fetch detailed info for a specific market.
@@ -311,7 +311,7 @@ FUNDER=your_polymarket_wallet_address`}
             </div>
 
             {/* Tool 3 */}
-            <div className="rounded-2xl border border-slate-700/60 bg-slate-900/70 p-6">
+            <div className="rounded-2xl border border-slate-700/50 bg-slate-900/70 p-6">
               <h3 className="mb-2 text-xl font-semibold text-sky-400">get-market-prices</h3>
               <p className="mb-4 text-slate-400">
                 Retrieve current outcome prices and implied probabilities.
@@ -331,7 +331,7 @@ FUNDER=your_polymarket_wallet_address`}
             </div>
 
             {/* Tool 4 */}
-            <div className="rounded-2xl border border-slate-700/60 bg-slate-900/70 p-6">
+            <div className="rounded-2xl border border-slate-700/50 bg-slate-900/70 p-6">
               <h3 className="mb-2 text-xl font-semibold text-sky-400">get-market-history</h3>
               <p className="mb-4 text-slate-400">
                 Get historical prices and volumes for a market.
