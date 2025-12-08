@@ -162,7 +162,7 @@ export default function Home() {
               <p className="mb-4 text-sm text-slate-400">
                 Get the repository and install dependencies using uv.
               </p>
-              <pre className="overflow-x-auto rounded-lg bg-slate-950 p-4 text-xs">
+              <pre className="overflow-x-auto rounded-lg bg-slate-950 p-4 text-xs font-mono">
                 <code className="text-slate-300">
                   {`git clone https://github.com/polysolmcp/polysolmcp.git
 cd polysolmcp
@@ -177,7 +177,7 @@ uv pip install -e .`}
               <p className="mb-4 text-sm text-slate-400">
                 Configure your Polymarket API key and wallet address.
               </p>
-              <pre className="overflow-x-auto rounded-lg bg-slate-950 p-4 text-xs">
+              <pre className="overflow-x-auto rounded-lg bg-slate-950 p-4 text-xs font-mono">
                 <code className="text-slate-300">
                   {`KEY=your_polymarket_api_key_here
 FUNDER=your_polymarket_wallet_address`}
@@ -194,12 +194,12 @@ FUNDER=your_polymarket_wallet_address`}
               <p className="mb-4 text-sm text-slate-400">
                 Start the MCP server and optionally use the inspector for debugging.
               </p>
-              <pre className="overflow-x-auto rounded-lg bg-slate-950 p-4 text-xs">
+              <pre className="overflow-x-auto rounded-lg bg-slate-950 p-4 text-xs font-mono">
                 <code className="text-slate-300">
                   {`uv run src/polymarket_mcp/server.py`}
                 </code>
               </pre>
-              <pre className="mt-3 overflow-x-auto rounded-lg bg-slate-950 p-4 text-xs">
+              <pre className="mt-3 overflow-x-auto rounded-lg bg-slate-950 p-4 text-xs font-mono">
                 <code className="text-slate-300">
                   {`npx @modelcontextprotocol/inspector \\
   uv --directory /path/to/polysolmcp \\
@@ -270,7 +270,7 @@ FUNDER=your_polymarket_wallet_address`}
           </p>
           <div className="grid gap-7 md:grid-cols-2">
             {/* Tool 1 */}
-            <div className="rounded-2xl border border-slate-700/50 bg-slate-900/70 p-6">
+            <div className="rounded-2xl border border-slate-700/50 bg-slate-900/70 p-6 transition-all duration-200 hover:border-slate-600/50">
               <h3 className="mb-2 text-xl font-semibold text-sky-400">list-markets</h3>
               <p className="mb-4 text-slate-400">
                 Browse markets with filters for status and pagination.
@@ -292,7 +292,7 @@ FUNDER=your_polymarket_wallet_address`}
             </div>
 
             {/* Tool 2 */}
-            <div className="rounded-2xl border border-slate-700/50 bg-slate-900/70 p-6">
+            <div className="rounded-2xl border border-slate-700/50 bg-slate-900/70 p-6 transition-all duration-200 hover:border-slate-600/50">
               <h3 className="mb-2 text-xl font-semibold text-sky-400">get-market-info</h3>
               <p className="mb-4 text-slate-400">
                 Fetch detailed info for a specific market.
@@ -312,7 +312,7 @@ FUNDER=your_polymarket_wallet_address`}
             </div>
 
             {/* Tool 3 */}
-            <div className="rounded-2xl border border-slate-700/50 bg-slate-900/70 p-6">
+            <div className="rounded-2xl border border-slate-700/50 bg-slate-900/70 p-6 transition-all duration-200 hover:border-slate-600/50">
               <h3 className="mb-2 text-xl font-semibold text-sky-400">get-market-prices</h3>
               <p className="mb-4 text-slate-400">
                 Retrieve current outcome prices and implied probabilities.
@@ -332,7 +332,7 @@ FUNDER=your_polymarket_wallet_address`}
             </div>
 
             {/* Tool 4 */}
-            <div className="rounded-2xl border border-slate-700/50 bg-slate-900/70 p-6">
+            <div className="rounded-2xl border border-slate-700/50 bg-slate-900/70 p-6 transition-all duration-200 hover:border-slate-600/50">
               <h3 className="mb-2 text-xl font-semibold text-sky-400">get-market-history</h3>
               <p className="mb-4 text-slate-400">
                 Get historical prices and volumes for a market.
