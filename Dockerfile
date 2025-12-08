@@ -3,6 +3,7 @@
 FROM python:3.10-slim
 
 # Set the working directory
+# This ensures all subsequent commands run from /app
 WORKDIR /app
 
 # Copy the requirements and source code into the container
