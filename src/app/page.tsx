@@ -125,7 +125,7 @@ export default function Home() {
                 with MCP-compatible AI clients like Claude Desktop.
               </p>
             </div>
-            <div className="rounded-2xl border border-slate-700/60 bg-slate-900/70 p-6">
+            <div className="rounded-2xl border border-slate-700/60 bg-slate-900/70 p-6 transition-all duration-200">
               <h3 className="mb-4 text-xl font-semibold">Highlights</h3>
               <ul className="space-y-3 text-slate-300">
                 <li className="flex items-start gap-2">
