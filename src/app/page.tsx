@@ -157,7 +157,7 @@ export default function Home() {
           </p>
           <div className="grid gap-7 md:grid-cols-3">
             {/* Step 1 */}
-            <div className="rounded-2xl border border-slate-700/60 bg-slate-900/70 p-6">
+            <div className="rounded-2xl border border-slate-700/60 bg-slate-900/70 p-6 transition-all duration-200">
               <h3 className="mb-3 text-xl font-semibold">1. Clone & install</h3>
               <p className="mb-4 text-sm text-slate-400">
                 Get the repository and install dependencies using uv.
@@ -172,7 +172,7 @@ uv pip install -e .`}
             </div>
 
             {/* Step 2 */}
-            <div className="rounded-2xl border border-slate-700/60 bg-slate-900/70 p-6">
+            <div className="rounded-2xl border border-slate-700/60 bg-slate-900/70 p-6 transition-all duration-200">
               <h3 className="mb-3 text-xl font-semibold">2. Set your environment variables</h3>
               <p className="mb-4 text-sm text-slate-400">
                 Configure your Polymarket API key and wallet address.
@@ -189,7 +189,7 @@ FUNDER=your_polymarket_wallet_address`}
             </div>
 
             {/* Step 3 */}
-            <div className="rounded-2xl border border-slate-700/60 bg-slate-900/70 p-6">
+            <div className="rounded-2xl border border-slate-700/60 bg-slate-900/70 p-6 transition-all duration-200">
               <h3 className="mb-3 text-xl font-semibold">3. Run the server</h3>
               <p className="mb-4 text-sm text-slate-400">
                 Start the MCP server and optionally use the inspector for debugging.
