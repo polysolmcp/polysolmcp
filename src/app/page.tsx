@@ -363,7 +363,7 @@ FUNDER=your_polymarket_wallet_address`}
           </p>
           <div className="grid gap-7 md:grid-cols-3">
             {/* Blueprint 1 */}
-            <div className="rounded-2xl border border-slate-700/60 bg-slate-900/70 p-6">
+            <div className="rounded-2xl border border-slate-700/60 bg-slate-900/70 p-6 transition-all duration-200">
               <h3 className="mb-3 text-xl font-semibold">Market Explorer Bot</h3>
               <p className="mb-4 text-sm text-slate-400">
                 Scans open markets, surfaces high-liquidity, high-volume markets, grouped by category.
@@ -379,7 +379,7 @@ FUNDER=your_polymarket_wallet_address`}
             </div>
 
             {/* Blueprint 2 */}
-            <div className="rounded-2xl border border-slate-700/60 bg-slate-900/70 p-6">
+            <div className="rounded-2xl border border-slate-700/60 bg-slate-900/70 p-6 transition-all duration-200">
               <h3 className="mb-3 text-xl font-semibold">Odds Change Sentinel</h3>
               <p className="mb-4 text-sm text-slate-400">
                 Watches specific markets for sharp moves in probabilities and alerts the user.
@@ -395,7 +395,7 @@ FUNDER=your_polymarket_wallet_address`}
             </div>
 
             {/* Blueprint 3 */}
-            <div className="rounded-2xl border border-slate-700/60 bg-slate-900/70 p-6">
+            <div className="rounded-2xl border border-slate-700/60 bg-slate-900/70 p-6 transition-all duration-200">
               <h3 className="mb-3 text-xl font-semibold">Narrative Tracker</h3>
               <p className="mb-4 text-sm text-slate-400">
                 Follows a theme (e.g. US election, BTC ETF, etc.) across multiple related markets.
