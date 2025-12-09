@@ -77,7 +77,7 @@ export default function Home() {
 
               {/* Right Side - Example Agent Card */}
               <div className="flex items-center justify-center">
-                <div className="w-full rounded-2xl border border-slate-700/60 bg-slate-900/70 p-6 backdrop-blur-sm">
+                <div className="w-full rounded-2xl border border-slate-700/60 bg-slate-900/70 p-6 backdrop-blur-sm transition-all duration-200 hover:border-slate-600/50">
                   <h3 className="mb-4 text-lg font-semibold">Example agent: Odds Sentinel</h3>
                   <div className="space-y-3 font-mono text-sm">
                     <div className="rounded-lg bg-slate-800/50 p-3">
