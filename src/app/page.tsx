@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 /**
  * Polymarket Agent Hub - Main Landing Page
  * 
@@ -15,7 +17,16 @@ export default function Home() {
       <nav className="sticky top-0 z-50 border-b border-slate-800 bg-slate-950/90 backdrop-blur-sm">
         <div className="mx-auto max-w-6xl px-4 py-4">
           <div className="flex items-center justify-between">
-            <h1 className="text-lg font-semibold">Polymarket Agent Hub</h1>
+            <div className="flex items-center gap-3">
+              <Image 
+                src="/logo.png" 
+                alt="Polymarket Agent Hub Logo" 
+                width={32}
+                height={32}
+                className="h-8 w-8"
+              />
+              <h1 className="text-lg font-semibold">Polymarket Agent Hub</h1>
+            </div>
             <a
               href="https://github.com/polysolmcp/polysolmcp"
               target="_blank"
