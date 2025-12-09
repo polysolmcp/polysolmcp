@@ -149,6 +149,27 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Simple Explanation Section */}
+        <section className="mb-28 md:mb-32">
+          <h2 className="mb-4 text-3xl font-bold md:text-4xl">In Simple Terms</h2>
+          <div className="rounded-2xl border border-slate-700/60 bg-slate-900/70 p-8">
+            <div className="space-y-4 text-slate-300 leading-relaxed">
+              <p className="text-lg">
+                Think of polymarket-mcp as a <span className="font-semibold text-sky-400">translator</span> between AI assistants (like Claude) and Polymarket prediction markets.
+              </p>
+              <p>
+                <span className="font-semibold text-sky-400">What are prediction markets?</span> They&apos;re places where people bet on whether something will happen—like &quot;Will it rain tomorrow?&quot; or &quot;Who will win the election?&quot; The prices tell you how likely people think each outcome is.
+              </p>
+              <p>
+                <span className="font-semibold text-sky-400">What does this tool do?</span> It lets AI assistants ask questions about these markets and get easy-to-understand answers. Instead of you having to visit Polymarket&apos;s website and search through data, you can just ask your AI assistant: &quot;What are the current odds on the election?&quot; or &quot;Show me the most popular markets right now.&quot;
+              </p>
+              <p>
+                <span className="font-semibold text-sky-400">Why is this useful?</span> AI assistants can help you understand market trends, track changes over time, and even alert you when something interesting happens—all through a simple conversation, without needing to be a tech expert.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Quickstart Section */}
         <section id="quickstart" className="mb-24 md:mb-32 scroll-mt-20">
           <h2 className="mb-2 text-3xl font-bold md:text-4xl">Quickstart: from zero to running MCP server</h2>
@@ -456,15 +477,26 @@ FUNDER=your_polymarket_wallet_address`}
                 Not affiliated with Polymarket. Use at your own risk.
               </p>
             </div>
-            <a
-              href="https://github.com/polysolmcp/polysolmcp"
-              target="_blank"
-              rel="noreferrer"
-              title="View repository on GitHub"
-              className="text-sm text-slate-400 hover:text-slate-200 transition-colors"
-            >
-              GitHub →
-            </a>
+            <div className="flex items-center gap-4">
+              <a
+                href="https://x.com/Polymcpsol"
+                target="_blank"
+                rel="noreferrer"
+                title="Follow us on X (Twitter)"
+                className="text-sm text-slate-400 hover:text-slate-200 transition-colors"
+              >
+                X (Twitter) →
+              </a>
+              <a
+                href="https://github.com/polysolmcp/polysolmcp"
+                target="_blank"
+                rel="noreferrer"
+                title="View repository on GitHub"
+                className="text-sm text-slate-400 hover:text-slate-200 transition-colors"
+              >
+                GitHub →
+              </a>
+            </div>
           </div>
         </div>
       </footer>
