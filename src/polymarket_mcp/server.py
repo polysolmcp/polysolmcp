@@ -234,6 +234,7 @@ def format_market_list(markets_data: list) -> str:
         for market in markets_data:
             try:
                 # Format volume as currency (handle both string and numeric)
+                # If conversion fails, fall back to displaying the raw value
                 volume = float(market.get('volume', 0))
                 volume_str = f"${volume:,.2f}"
             except (ValueError, TypeError):
@@ -413,6 +414,8 @@ async def handle_call_tool(
                 ]
             
             # Apply pagination (limit and offset)
+            # This allows clients to request specific ranges of results
+            # for efficient data retrieval when dealing with large market lists
             offset = arguments.get("offset", 0)
             limit = arguments.get("limit", 10)
             markets_data = markets_data[offset:offset + limit]
@@ -470,6 +473,9 @@ async def main():
     This function sets up the stdio communication channel and starts
     the server. It runs until the client disconnects or the process
     is terminated.
+    
+    The stdio (standard input/output) channel is the standard way
+    MCP servers communicate with clients like Claude Desktop.
     """
     # Use stdio (standard input/output) for communication with MCP clients
     # This is the standard way MCP servers communicate with clients like Claude Desktop
